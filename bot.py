@@ -1,12 +1,14 @@
-import time
 import logging
-import string
 
-from aiogram import executor
 from create_bot import dp, bot
+from aiogram import executor
 
 
 logging.basicConfig(level=logging.INFO)
+
+from handlers import client, admin, general
+
+client.register_handlers_client(dp=dp)
 
 
 
